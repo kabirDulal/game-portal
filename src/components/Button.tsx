@@ -1,13 +1,17 @@
+import { ReactNode } from "react";
+
 interface Props {
-	children: string;
+  children: string;
+  onClick: ReactNode;
 }
 
-const Button = () => {
+const Button = ({children, onClick}: Props) => {
   return (
-    <div type = "button" className="btn btn-secondary">
-	Click Me
-    </div>
-  )
-}
+    <button type="button" className="btn btn-secondary" >
+      {children}
+      clickHandler= {onClick}
+    </button>
+  );
+};
 
-export default Button
+export default Button;

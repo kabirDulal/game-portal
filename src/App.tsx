@@ -8,16 +8,23 @@ function App() {
   return (
     <>
       <div className="mb-3">
-        <ListGroup items={cities} heading='List of Cities' onSelectItem={handleSelectItem} />
+        <ListGroup
+          items={cities}
+          heading="List of Cities"
+          onSelectItem={handleSelectItem}
+        />
       </div>
       <div className="alert alert-primary">
         <Alert>
-          Hello <span>World </span>  
+          Hello <span>World </span>
         </Alert>
       </div>
-      <div type = "button" className="btn btn-secondary">
-        <Button />
-      </div>
+      <button
+        className="btn btn-primary"
+        children="Click Me"
+        onClick={() => {          
+        }}
+      />
     </>
   );
 }
